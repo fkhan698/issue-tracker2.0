@@ -1,1 +1,12 @@
-This is the issue page
+<h1>Search Issues Page</h1>
+
+<form action="/issues" method="GET">
+    <label for="">Issues</label>
+    <input type="text" name="title" value="<%= searchOptions.title%>">
+    <button type="submit">Search</button>
+</form>
+
+
+<% issues.forEach(issue => { %>
+    <h1><%= issue.title %></h1>
+<% }) %>
